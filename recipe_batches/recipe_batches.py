@@ -2,7 +2,7 @@
 
 import math
 
-yeet = { 'milk': 2, 'sugar': 40, 'butter': 20 }
+yeet = { 'milk': 2, 'sugar': 40, 'butter': 20, "go":90 }
 
 yate = { 'milk': 5, 'sugar': 120, 'butter': 500 }
 
@@ -11,15 +11,13 @@ def recipe_batches(recipe, ingredients):
 
 
   if len(recipe) != len(ingredients):
-    max_amount = 0
-    return max_amount
+    return 0
 
   max_amount = float('inf')
 
   for x in recipe:
     divide = math.floor(ingredients[x]/recipe[x])
     if divide <= max_amount:
-      print(f"{divide}<={max_amount}")
       max_amount = divide
   
   return max_amount
