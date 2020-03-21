@@ -2,8 +2,27 @@
 
 import argparse
 
+# yeet = [100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79]
+
 def find_max_profit(prices):
-  pass
+
+  max_profit = float("-inf")
+
+  for x in range(0,len(prices)):
+
+    buy_value = x
+    for y in range(buy_value+1,len(prices)):
+
+      profit_value = prices[y] - prices[buy_value] 
+
+      if profit_value >= max_profit:
+        max_profit = profit_value
+  
+  return max_profit
+
+
+# print(find_max_profit(yeet))
+#change
 
 
 if __name__ == '__main__':
